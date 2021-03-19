@@ -1,0 +1,42 @@
+mutation createCategory {
+  createCategory(input: { name: "GO", description: "PHP is lame" }) {
+    id
+    name
+    description
+  }
+}
+
+mutation createCourse {
+  createCourse(
+    input: {
+      name: "Course Go"
+      description: "PHP is mega lame"
+      categoryId: "T5577006791947779410"
+    }
+  ) {
+    id
+    name
+    description
+    category {
+      id
+      name
+    }
+  }
+}
+
+mutation createChapter {
+  createChapter(
+    input: { name: "Chapter Php", courseId: "T8674665223082153551" }
+  ) {
+    id
+    name
+    course {
+      id
+      name
+    }
+    category {
+      id
+      name
+    }
+  }
+}

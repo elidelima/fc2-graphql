@@ -1,0 +1,29 @@
+# Write your query or mutation here
+query findCategories {
+  categories {
+    id
+    name
+    description
+    courses {
+      id
+      name
+      description
+    }
+  }
+}
+
+query findCourses {
+  courses {
+    id
+    name
+    description
+    category {
+      id
+      name
+    }
+    chapters {
+      id
+      name
+    }
+  }
+}
